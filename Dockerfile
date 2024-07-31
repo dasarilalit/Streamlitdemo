@@ -8,6 +8,9 @@ RUN apt-get update && apt-get install -y \
     git \
     && rm -rf /var/lib/apt/lists/*
 
+# Remove existing Streamlitdemo directory if it exists
+RUN rm -rf /app/Streamlitdemo
+
 WORKDIR /app
 
 COPY . /main
