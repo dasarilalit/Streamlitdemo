@@ -8,9 +8,9 @@ RUN apt-get update && apt-get install -y \
     git \
     && rm -rf /var/lib/apt/lists/*
 
-WORKDIR /app
+WORKDIR /main
 
-COPY . /app
+COPY . /main
 
 RUN pip3 install -r requirements.txt
 
