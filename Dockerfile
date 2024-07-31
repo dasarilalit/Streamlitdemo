@@ -14,10 +14,10 @@ WORKDIR /app
 RUN rm -rf /app/Streamlitdemo
 
 # Copy only the requirements.txt file first to ensure it's available for pip install
-COPY requirements.txt /app/
+COPY Requirements.txt /app/
 
 # Install dependencies
-RUN pip3 install -r requirements.txt
+RUN pip3 install -r Requirements.txt
 
 # Copy the rest of the application files
 COPY . /app
